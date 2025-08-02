@@ -31,7 +31,7 @@ export const MenuPage = () => {
                 {/* User Info */}
                 <div className="flex flex-col items-center mt-6 mb-4">
                     <img
-                        src="https://via.placeholder.com/80"
+                        src="/my-avatar.png"
                         alt="User"
                         className="w-20 h-20 rounded-full mb-2 object-cover"
                     />
