@@ -121,8 +121,9 @@ const BoardingPass = () => {
                 </div>
                 {/* Memories Section */}
                 <div className="mt-8 mb-32">
-                    <h3 className="text-lg font-semibold mb-2">Memories</h3>
-
+                    <div className='flex'
+>                    <h3 className="text-lg font-semibold mb-2">Memories </h3> <p className='text-xs font-light items-center my-1.5 ml-2'>(No data is stored anywhere)</p>
+</div>
                     {/* Image Upload */}
                     {images.length < 5 && (
                         <label className="cursor-pointer inline-block mb-4 text-blue-600 font-semibold  text-md">
