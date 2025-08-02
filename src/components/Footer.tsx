@@ -1,6 +1,5 @@
-import React from 'react'
 import {
-    Bell, Plus, Car, Building2, Home, FileText, Menu, X
+Car, Building2, Home, FileText, Menu
 } from 'lucide-react';
 
 import { Link } from "react-router-dom"

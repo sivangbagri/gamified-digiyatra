@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Bell, Plus, X } from 'lucide-react';
 import { Link } from "react-router-dom";
 import PhoneScreenWrapper from "../components/PhoneWrapper";

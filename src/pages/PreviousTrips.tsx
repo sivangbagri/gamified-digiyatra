@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PhoneScreenWrapper from '../components/PhoneWrapper';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
@@ -58,7 +58,7 @@ const MapView = () => {
 
             <div className="flex justify-around w-full border-t py-2">
                 <div className="flex flex-col items-center text-sm">
-                    <img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" className='size-8'/>
+                    <img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" className='size-8' />
                     <span>Instagram</span>
                 </div>
                 <div className="flex flex-col items-center text-sm">
@@ -112,49 +112,49 @@ function PreviousTrips() {
                         <div className="space-y-4 p-4">
                             {trips.map((trip, idx) => (
                                 <Link key={idx} to="/boarding">
-                                <div className="relative overflow-hidden border border-gray-200 rounded-2xl px-4 py-5 min-h-40 mb-5 bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
-                              
-                                  {/* Background Image Grid */}
-                                  <div className="absolute inset-0 z-0 grid grid-cols-3 grid-rows-2 opacity-50 pointer-events-none">
-                                    {images.slice(0, 5).map((src, i) => (
-                                      <img
-                                        key={i}
-                                        src={src}
-                                        alt={`bg-${i}`}
-                                        className={`object-cover w-full h-full ${i === 0 ? 'col-span-1 row-span-2' : ''}`}
-                                      />
-                                    ))}
-                                  </div>
-                              
-                                  {/* Foreground Content */}
-                                  <div className="relative z-10 flex items-center justify-between">
-                              
-                                    {/* Airline + Route Info */}
-                                    <div className="flex items-center space-x-4">
-                                      <img
-                                        src={trip.airlineLogo}
-                                        alt={trip.airlineName}
-                                        className="h-20 w-20 object-contain rounded-md shadow-sm"
-                                      />
-                                      <div>
-                                        <div className="flex items-center space-x-2 font-bold text-3xl text-gray-800">
-                                          <span>{trip.from}</span>
-                                          <span>✈️</span>
-                                          <span>{trip.to}</span>
+                                    <div className="relative overflow-hidden border border-gray-200 rounded-2xl px-4 py-5 min-h-40 mb-5 bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
+
+                                        {/* Background Image Grid */}
+                                        <div className="absolute inset-0 z-0 grid grid-cols-3 grid-rows-2 opacity-50 pointer-events-none">
+                                            {images.slice(0, 5).map((src, i) => (
+                                                <img
+                                                    key={i}
+                                                    src={src}
+                                                    alt={`bg-${i}`}
+                                                    className={`object-cover w-full h-full ${i === 0 ? 'col-span-1 row-span-2' : ''}`}
+                                                />
+                                            ))}
                                         </div>
-                                        <div className="text-md text-gray-500 mt-1">
-                                          PNR: <span className="font-bold text-gray-800">{trip.pnr}</span>
+
+                                        {/* Foreground Content */}
+                                        <div className="relative z-10 flex items-center justify-between">
+
+                                            {/* Airline + Route Info */}
+                                            <div className="flex items-center space-x-4">
+                                                <img
+                                                    src={trip.airlineLogo}
+                                                    alt={trip.airlineName}
+                                                    className="h-20 w-20 object-contain rounded-md shadow-sm"
+                                                />
+                                                <div>
+                                                    <div className="flex items-center space-x-2 font-bold text-3xl text-gray-800">
+                                                        <span>{trip.from}</span>
+                                                        <span>✈️</span>
+                                                        <span>{trip.to}</span>
+                                                    </div>
+                                                    <div className="text-md text-gray-500 mt-1">
+                                                        PNR: <span className="font-bold text-gray-800">{trip.pnr}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Date */}
+                                            <div className="text-md text-gray-800 font-medium">{trip.date}</div>
+
                                         </div>
-                                      </div>
                                     </div>
-                              
-                                    {/* Date */}
-                                    <div className="text-md text-gray-800 font-medium">{trip.date}</div>
-                              
-                                  </div>
-                                </div>
-                              </Link>
-                              
+                                </Link>
+
                             ))}
                         </div>
                     </>

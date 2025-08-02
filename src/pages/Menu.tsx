@@ -1,12 +1,9 @@
-import React from 'react';
 import {
     ChevronRight,
     FileText,
     HelpCircle,
     Menu,
-    Home,
-    Car,
-    Building2,
+
     MessageSquare
 } from 'lucide-react';
 import { Link } from "react-router-dom"
