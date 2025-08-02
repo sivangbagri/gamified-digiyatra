@@ -34,6 +34,7 @@ const trips: Trip[] = [
 const MapView = () => {
     return (
         <div className="flex flex-col items-center justify-between min-h-175 pt-10 pb-20 bg-[#f5f5f5] text-gray-800">
+            <p className='font-semibold text-xl mt-5'>Let’s keep the map filling! ✊🏻</p>
             <div className="flex-grow flex flex-col justify-center items-center">
                 <img
                     src="/world-map.png"
