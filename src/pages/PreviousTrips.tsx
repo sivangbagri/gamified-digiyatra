@@ -116,7 +116,7 @@ function PreviousTrips() {
                                     <div className="relative overflow-hidden border border-gray-200 rounded-2xl px-4 py-5 min-h-40 mb-5 bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
 
                                         {/* Background Image Grid */}
-                                        <div className="absolute inset-0 z-0 grid grid-cols-3 grid-rows-2 opacity-50 pointer-events-none">
+                                        <div className="absolute inset-0 z-0 grid grid-cols-3 grid-rows-2 opacity-40 pointer-events-none">
                                             {images.slice(0, 5).map((src, i) => (
                                                 <img
                                                     key={i}
@@ -128,33 +128,36 @@ function PreviousTrips() {
                                         </div>
 
                                         {/* Foreground Content */}
-                                        <div className="relative z-10 flex items-center justify-between">
+                                        <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 
                                             {/* Airline + Route Info */}
-                                            <div className="flex items-center space-x-4">
+                                            <div className="flex items-center gap-4 w-full sm:w-auto">
                                                 <img
                                                     src={trip.airlineLogo}
                                                     alt={trip.airlineName}
-                                                    className="h-20 w-20 object-contain rounded-md shadow-sm"
+                                                    className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-md shadow-sm shrink-0"
                                                 />
-                                                <div>
-                                                    <div className="flex items-center space-x-2 font-bold text-3xl text-gray-800">
+                                                <div className="flex flex-col">
+                                                    <div className="flex items-center flex-wrap gap-x-2 font-bold text-xl sm:text-3xl text-gray-800">
                                                         <span>{trip.from}</span>
                                                         <span>✈️</span>
                                                         <span>{trip.to}</span>
                                                     </div>
-                                                    <div className="text-md text-gray-500 mt-1">
+                                                    <div className="text-sm sm:text-md text-gray-500 mt-1">
                                                         PNR: <span className="font-bold text-gray-800">{trip.pnr}</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             {/* Date */}
-                                            <div className="text-md text-gray-800 font-medium">{trip.date}</div>
+                                            <div className="text-sm sm:text-md text-gray-800 font-medium w-full sm:w-auto text-right sm:text-left">
+                                                {trip.date}
+                                            </div>
 
                                         </div>
                                     </div>
                                 </Link>
+
 
                             ))}
                         </div>

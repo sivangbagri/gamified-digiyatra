@@ -55,13 +55,13 @@ export const HomePage = () => {
 
     const handleAddBoardingPass = () => {
         setIsLoading(true);
-        
+
         setTimeout(() => {
             setIsLoading(false);
             setShowSuccess(true);
             setShowDetails(true);
         }, 2500);
-       
+
 
     };
 
@@ -136,11 +136,11 @@ export const HomePage = () => {
 
 
                 {/* Action Buttons */}
-                <div className="px-6 mb-6">
-                    <div className="flex items-center justify-between gap-4">
+                <div className="px-4 sm:px-6 mb-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
                         {/* Segmented Button Group */}
-                        <div className="flex bg-white rounded-full shadow-md border border-gray-200 overflow-hidden flex-1">
+                        <div className="flex bg-white rounded-full shadow-md border border-gray-200 overflow-hidden flex-1 sm:max-w-md">
                             <button
                                 className="flex-1 py-3 px-2 flex flex-col items-center justify-center text-xs font-medium text-gray-800 hover:bg-gray-50 transition"
                             >
@@ -158,7 +158,7 @@ export const HomePage = () => {
                         {/* Primary CTA */}
                         <button
                             onClick={handleAddBoardingPass}
-                            className="bg-orange-400 hover:bg-orange-500 transition text-white font-medium text-sm px-4 py-4 rounded-full flex items-center shadow-md cursor-pointer"
+                            className="bg-orange-400 hover:bg-orange-500 transition text-white font-medium text-sm px-4 py-4 rounded-full flex items-center justify-center shadow-md cursor-pointer"
                         >
                             Add Boarding Pass
                             <div className="ml-2 w-6 h-6 bg-white/30 rounded-full flex items-center justify-center">
@@ -168,6 +168,7 @@ export const HomePage = () => {
 
                     </div>
                 </div>
+
 
 
                 {/* Survey Banner */}
